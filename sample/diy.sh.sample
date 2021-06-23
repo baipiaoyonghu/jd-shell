@@ -109,7 +109,7 @@ for author in $author_list; do
     echo $url
     eval name=$js
     echo $name
-    wget -q --no-check-certificate $url -O scripts/$name.new
+    wget -q --no-check-certificate $url -O scripts2/$name.new
 
     if [ $? -eq 0 ]; then
       mv -f scripts/$name.new scripts/$name
