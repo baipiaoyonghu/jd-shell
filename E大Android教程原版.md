@@ -99,7 +99,7 @@ v3版脚本已经可以正常在外置存储运行了，这样查看日志就方
 
     # 复制仓库下sample/termux.list.sample到config目录中，并命名为crontab.list
     cp sample/termux.list.sample config/crontab.list
-    
+    cp sample/diy.sh.sample config/diy.sh
     # 编辑刚刚复制后的两个文件，Ctr + O保存，Ctrl + X退出
     nano config/config.sh
     nano config/crontab.list    # 请注意crontab.list中的路径中家目录不要用~代替，必须是完整的路径 
