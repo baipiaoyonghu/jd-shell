@@ -98,6 +98,21 @@ rand() {
 }
 cd ${ShellDir}
 index=1
+##############################  判  断  文  件  夹  ##############################  
+if [ ! -d "scripts2" ];then
+
+mkdir scripts2
+
+echo "这儿也可以放任意你想实现的功能代码(包括if，for，case语句等)，也比如文件创建成功以后上传文件到该目录"
+
+else
+
+echo "文件夹已经存在"
+
+echo "这儿也可以放任意你想实现的功能代码(包括if，for，case语句等)，也比如文件创建成功以后上传文件到该目录"
+
+fi
+
 for author in $author_list; do
   echo -e "开始下载 $author 的活动脚本：\n"
   eval scripts_list=\$my_scripts_list_${index}
