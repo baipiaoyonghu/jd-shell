@@ -194,7 +194,7 @@ function Run_Nohup {
 function Find_FileDir {
   FileNameTmp1=$(echo $1 | perl -pe "s|\.js||")
   FileNameTmp2=$(echo $1 | perl -pe "{s|jd_||; s|\.js||; s|^|jd_|}")
-  SeekDir="${ScriptsDir} ${ScriptsDir}/backUp ${ConfigDir}"
+  SeekDir="${ScriptsDir} ${ScriptsDir}/backUp ${ConfigDir} ${ShellDir}/scripts2"
   FileName=""
   WhichDir=""
 
