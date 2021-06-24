@@ -23,8 +23,8 @@ ContentNewTask=${ShellDir}/new_task
 ContentDropTask=${ShellDir}/drop_task
 SendCount=${ShellDir}/send_count
 isTermux=${ANDROID_RUNTIME_ROOT}${ANDROID_ROOT}
-ShellURL=https://hub.fastgit.org/baipiaoyonghu/jd-shell.git
-ScriptsURL=https://hub.fastgit.org/baipiaoyonghu/jd-scripts.git
+ShellURL=${JD_SHELL_URL:-https://hub.fastgit.org/baipiaoyonghu/jd-shell.git}
+ScriptsURL=${JD_SCRIPTS_URL:-https://hub.fastgit.org/baipiaoyonghu/jd-scripts.git}
 
 ## 导入配置文件
 function Import_Conf {
