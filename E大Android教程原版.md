@@ -77,7 +77,7 @@ v3版脚本已经可以正常在外置存储运行了，这样查看日志就方
     如需以后从Github更新我的和lxk0301大佬的脚本：
 
     ```shell
-    git clone -b v3 https://github.com/EvineDeng/jd-base ~/storage/shared/jd
+    git clone -b v3 https://ghproxy.com/https://github.com/baipiaoyonghu/jd-shell ~/storage/shared/jd
     ```
 
     如需以后从Gitee更新我的和lxk0301大佬的脚本：

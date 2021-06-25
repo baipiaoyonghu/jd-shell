@@ -98,21 +98,6 @@ rand() {
 }
 cd ${ShellDir}
 index=1
-##############################  判  断  文  件  夹  ##############################  
-if [ ! -d "scripts2" ];then
-
-mkdir scripts2
-
-echo "这儿也可以放任意你想实现的功能代码(包括if，for，case语句等)，也比如文件创建成功以后上传文件到该目录"
-
-else
-
-echo "文件夹已经存在"
-
-echo "这儿也可以放任意你想实现的功能代码(包括if，for，case语句等)，也比如文件创建成功以后上传文件到该目录"
-
-fi
-
 for author in $author_list; do
   echo -e "开始下载 $author 的活动脚本：\n"
   eval scripts_list=\$my_scripts_list_${index}
@@ -124,13 +109,13 @@ for author in $author_list; do
     echo $url
     eval name=$js
     echo $name
-    wget -q --no-check-certificate $url -O scripts2/$name.new
+    wget -q --no-check-certificate $url -O scripts/$name.new
 
     if [ $? -eq 0 ]; then
-      mv -f scripts2/$name.new scripts2/$name
+      mv -f scripts/$name.new scripts/$name
       echo -e "更新 $name 完成...\n"
       croname=$(echo "$name" | awk -F\. '{print $1}')
-      script_date=$(cat scripts2/$name | grep "http" | awk '{if($1~/^[0-59]/) print $1,$2,$3,$4,$5}' | sort | uniq | head -n 1)
+      script_date=$(cat scripts/$name | grep "http" | awk '{if($1~/^[0-59]/) print $1,$2,$3,$4,$5}' | sort | uniq | head -n 1)
       if [ -z "${script_date}" ]; then
         cron_min=$(rand 1 59)
         cron_hour=$(rand 7 9)
@@ -139,7 +124,7 @@ for author in $author_list; do
         [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hangup/a${script_date} bash /sdcard/jd/jd.sh $croname" ${ListCron}
       fi
     else
-      [ -f scripts2/$name.new ] && rm -f scripts2/$name.new
+      [ -f scripts/$name.new ] && rm -f scripts/$name.new
       echo -e "更新 $name 失败，使用上一次正常的版本...\n"
     fi
   done
