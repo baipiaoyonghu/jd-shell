@@ -1,6 +1,6 @@
-## Version: v3.32.2
-## Date: 2021-03-15
-## Update Content: 本次没有更新config.sh.sample，而是更新了jd.sh脚本的功能：并发执行，无论是否设置了随机延迟，均立即运行，前台不产生日志，直接记录在日志文件中。具体用法请输入bash jd.sh查看，如需要用在定时任务中，需要自己手动修改crontab.list。
+## Version: v3.33.1
+## Date: 2021-06-26
+## Update Content: 本次更新了自定义账户(1.2.3)名称关键字 建议全部对应 不然只修改1  那么12  13的1也会变化  来自tg用户 pingx c的文件 原版的文件我会放进脚本目录backUp里面
 
 ## 上面版本号中，如果第2位数字有变化，那么代表增加了新的参数，如果只有第3位数字有变化，仅代表更新了注释，没有增加新的参数，可更新可不更新
 
@@ -16,6 +16,15 @@
 ## 其他date命令的更多用法，可以在命令行中输入 date --help  查看
 ## 判断条件 -eq -ne -gt -ge -lt -le ，具体含义可百度一下
 
+##自定义账户(1.2.3)名称关键字 建议全部对应 不然只修改1  那么12  13的1也会变化  来自tg用户 pingx c的文件 原版的文件我会放进脚本目录backUp里面
+export COOKIE_NAME_EN="true"
+export COOKIE_NAME1=""
+export COOKIE_NAME2=""
+export COOKIE_NAME3=""
+export COOKIE_NAME4=""
+export COOKIE_NAME5=""
+export COOKIE_NAME6=""
+export COOKIE_NAME7=""
 
 ################################## 定义Cookie（必填） ##################################
 ## 请依次填入每个用户的Cookie，Cookie的具体形式（只有pt_key字段和pt_pin字段，没有其他字段）：pt_key=xxxxxxxxxx;pt_pin=xxxx;
@@ -621,7 +630,11 @@ export JDDJ_CKPATH="${ShellDir}/scripts/jdCookie.js"
 ##京喜开团ID环境变量
 export TUAN_ACTIVEID=""
 export tuanIds=""
-#柠檬省钱大赢家
+##OPEN_DREAMFACTORY_TUAN 脚本默认第一个CK开团，例：若OPEN_DREAMFACTORY_TUAN="2,3"  则第2，第3个CK开团，其他账号参加第2，第3个CK开的团
+##助力规则：开团账号开团，其他账号自动参团。 例：有A,B,C账号，A，B账号开团，则B，C会参加A的团，A会参加B的团
+##账号内互助之后，开团账号若有剩下参团次数，会尝试加入作者团
+##export OPEN_DREAMFACTORY_TUAN=""
+#柠檬省钱大赢家人头不够50别玩
 #自定义邀请码环境变量
 export redEnvelopeId="" ##本期活动ID
 export inviter="" ##邀请码
