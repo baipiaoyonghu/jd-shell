@@ -1,6 +1,6 @@
-## Version: v3.33.1
-## Date: 2021-06-26
-## Update Content: 本次更新了自定义账户(1.2.3)名称关键字 建议全部对应 不然只修改1  那么12  13的1也会变化  来自tg用户 pingx c的文件 原版的文件我会放进脚本目录backUp里面
+## Version: v3.34.1
+## Date: 2021-06-27
+## Update Content: 本次更新了diy.sh  搬运与SuperManito   修改定时任务路径为bash /sdcard/jd/jd.sh  本人手机专用  如有需求，自行修改
 
 ## 上面版本号中，如果第2位数字有变化，那么代表增加了新的参数，如果只有第3位数字有变化，仅代表更新了注释，没有增加新的参数，可更新可不更新
 
@@ -17,14 +17,13 @@
 ## 判断条件 -eq -ne -gt -ge -lt -le ，具体含义可百度一下
 
 ##自定义账户(1.2.3)名称关键字 建议全部对应 不然只修改1  那么12  13的1也会变化  来自tg用户 pingx c的文件 原版的文件我会放进脚本目录backUp里面
-export COOKIE_NAME_EN="true"
-export COOKIE_NAME1=""
-export COOKIE_NAME2=""
-export COOKIE_NAME3=""
-export COOKIE_NAME4=""
-export COOKIE_NAME5=""
-export COOKIE_NAME6=""
-export COOKIE_NAME7=""
+#export COOKIE_NAME_EN="true"
+#export COOKIE_NAME1=""
+#export COOKIE_NAME2=""
+#export COOKIE_NAME3=""
+#export COOKIE_NAME4=""
+#export COOKIE_NAME5=""
+#export COOKIE_NAME6=""
 
 ################################## 定义Cookie（必填） ##################################
 ## 请依次填入每个用户的Cookie，Cookie的具体形式（只有pt_key字段和pt_pin字段，没有其他字段）：pt_key=xxxxxxxxxx;pt_pin=xxxx;
