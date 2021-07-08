@@ -21,7 +21,7 @@
 # ddo_pk.js                    京享值PK
 # long_half_redrain.js         半点红包雨
 # long_super_redrain.js        整点红包雨
-
+#jd_summer_movement.js     燃动夏季
 
 ## 一次性活动脚本：
 
@@ -54,11 +54,11 @@ fi
 
 ##############################  作  者  昵  称  &  脚  本  地  址  &  脚  本  名  称  （必填）  ##############################
 
-author_list="Public ZCY01 passerby-b LongZhuZhu Wenmoux panghu MoPoQAQ Andy ddo"
+author_list="Public ZCY01 passerby-b LongZhuZhu Wenmoux panghu MoPoQAQ Andy ddo star261"
 
 ## Public
-scripts_base_url_1=https://gitee.com/SuperManito/scripts/raw/master/
-my_scripts_list_1="jx_cfdtx.js jdJxncTokens.js jd_necklace.js"
+#scripts_base_url_1=https://gitee.com/SuperManito/scripts/raw/master/
+#my_scripts_list_1="jx_cfdtx.js jdJxncTokens.js jd_necklace.js"
 
 ## 京东试用
 scripts_base_url_2=https://gitee.com/SuperManito/scripts/raw/master/
@@ -74,7 +74,7 @@ my_scripts_list_4="long_half_redrain.js long_super_redrain.js"
 
 ## Wenmoux
 scripts_base_url_5=${DownloadJudgment}https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/
-my_scripts_list_5="jd_SplitRedPacket.js jd_ddnc_farmpark.js jd_qqxing.js"
+my_scripts_list_5="chinnkarahoi_jd_bookshop.js jd_ddnc_farmpark.js jd_qqxing.js jd_wxFans.js"
 
 ## 柠檬/panghu
 scripts_base_url_6=${DownloadJudgment}https://raw.githubusercontent.com/panghu999/panghu/master/
@@ -92,6 +92,9 @@ my_scripts_list_8="Andy_sendBeans.js"
 scripts_base_url_9=${DownloadJudgment}https://raw.githubusercontent.com/hyzaw/scripts/main/
 my_scripts_list_9="ddo_pk.js"
 
+## star261
+scripts_base_url_10=${DownloadJudgment}https://raw.githubusercontent.com/star261/jd/main/scripts/
+my_scripts_list_10="jd_summer_movement.js jd_summer_movement_card.js jd_summer_movement_map.js jd_jxmc.js"
 ## 免责声明：部分脚本的来源仓库启用了别人 FORK 或搬运的库并非原作者的官方渠道，能不能用我不知道，有什么问题也别问我
 
 ##############################  随  机  函  数  ##############################
@@ -138,3 +141,4 @@ done
 
 rm -rf ${ScriptsDir}/star_dreamFactory_tuan.js && sed -i "/star_dreamFactory_tuan/d" ${ListCron}
 grep -q "jd_qqxing" ${ListCron} && sed -i '/&*jd_qqxing/c30 7 * * * bash /sdcard/jd/jd.sh jd_qqxing' ${ListCron}
+#sed -i '/0,3,8,11,17/c*\/10 7 * * * bash \/sdcard\/jd\/jd.sh jddj_fruit' ${ListCron}
