@@ -142,5 +142,3 @@ done
 rm -rf ${ScriptsDir}/star_dreamFactory_tuan.js && sed -i "/star_dreamFactory_tuan/d" ${ListCron}
 grep -q "jd_qqxing" ${ListCron} && sed -i '/&*jd_qqxing/c30 7 * * * bash /sdcard/jd/jd.sh jd_qqxing' ${ListCron}
 #sed -i '/0,3,8,11,17/c*\/10 7 * * * bash \/sdcard\/jd\/jd.sh jddj_fruit' ${ListCron}
-cd /sdcard/jd/scripts/
-grep -rl "require('fs/promises');" ./ | xargs sed -i "s|require('fs/promises');|require('fs').promises;|g"
